@@ -3,4 +3,11 @@ project(Chomp)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Chomp main.cpp gui.cpp robot.cpp player.cpp)
+include_directories("src/public")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data)
+
+add_executable(Chomp
+    src/private/main.cpp
+    src/private/gui.cpp
+    src/private/robot.cpp
+    src/private/player.cpp)

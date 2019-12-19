@@ -4,7 +4,7 @@
 #include "utils.h"
 
 Robot::Robot(int column, int row) {
-	std::ifstream in{"./data/states_" + std::to_string(ALGO_LIMIT) + ".txt"};
+	std::ifstream in{"./states_" + std::to_string(ALGO_LIMIT) + ".txt"};
 	std::vector<State> states;
 	for (std::string line; std::getline(in, line);) {
 		states.push_back(Split(line, ' '));

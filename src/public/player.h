@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include "gui.h"
 
 namespace Player {
