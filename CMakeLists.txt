@@ -3,4 +3,4 @@ project(Chomp)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Chomp main.cpp)
+add_executable(Chomp main.cpp gui.cpp robot.cpp player.cpp)
