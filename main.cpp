@@ -5,10 +5,7 @@
 #include <vector>
 #include <tuple>
 
-
 #define USING R"(using: "human"/"robot"(who move first) 0<columns<13 0<rows<13)""\n"
-
-
 
 int main(int argc, char **argv) {
 	if (argc < 3) {
@@ -20,7 +17,7 @@ int main(int argc, char **argv) {
 	}
 	const int COLUMNS = std::stoi(argv[2]);
 	const int ROWS = std::stoi(argv[3]);
-	if (COLUMNS > Robot::ALGO_LIMIT || ROWS >  Robot::ALGO_LIMIT) {
+	if (COLUMNS > Robot::ALGO_LIMIT || ROWS > Robot::ALGO_LIMIT) {
 		throw std::runtime_error{USING"Field size exceeds algorithm limit"};
 	} else if (1 > COLUMNS || 1 > ROWS) {
 		throw std::runtime_error{USING"Field size is too small"};
